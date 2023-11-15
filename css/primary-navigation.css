@@ -1,0 +1,35 @@
+.primary-navigation {
+    max-width: 60rem;
+    margin: var(--horz-center);
+    & ul {
+        list-style: none;
+        padding-left: 0;
+        display: var(--flex);
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: baseline;
+
+        & li {
+            flex-shrink: 0;
+        }
+    }
+    & a {
+        text-decoration: none;
+        color: var(--light);
+        border-bottom: 5px solid transparent;
+        padding-block-end: 0.5rem;
+        margin-bottom: 1rem;
+
+        &:hover {
+            border-bottom-color: var(--link);
+        }
+
+        &[aria-current="page"],
+        &[aria-current="page"]:hover {
+            text-decoration: none;
+            cursor: default;
+            border-bottom-color: var(--link);
+            font-weight: 600;
+        }
+    }
+}
