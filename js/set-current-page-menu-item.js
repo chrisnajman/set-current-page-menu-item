@@ -3,7 +3,7 @@ export default function setCurrentPageMenuItem() {
   primaryNavLinks.forEach((link) => {
     if (
       link.pathname.split("/").pop() === "index.html" &&
-      location.pathname.split("/").pop() === ""
+      location.href.split("/").pop() === ""
     ) {
       link.setAttribute("aria-current", "page")
     } else if (link.href === location.href) {
