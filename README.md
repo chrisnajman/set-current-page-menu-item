@@ -11,15 +11,19 @@ Go to any page and the primary menu link for that page will be highlighted. You 
 The JavaScript function checks to see if the `link.href` matches the `location.href`. If it does, the attribute `aria-current="page"` is set on the link. To cover the situation when the `location.href` is only `/` a further check is made:
 
 ```JavaScript
-if (link.pathname === "/index.html" && location.pathname === "/")
+if (
+      link.pathname.split("/").pop() === "index.html" &&
+      location.pathname.split("/").pop() === ""
+    )
 ```
 
 If this is true, the attribute is set on the 'Home' link.
 
-**Notes**
+##### Notes
 
 - The 'Home' page file name is `index.html`. If you decide to change it (e.g. `home.html`) you will have to update the reference to it in the JavaScript.
 - The function is placed in a module and imported and called (`document.body.onload = setCurrentPageMenuItem()`) in `index.js`.
+- **Important**: the function only works on a flat, top-level menu. It doesn't work if there are sub-folders containing an `index.html` page.
 
 #### CSS
 
@@ -35,7 +39,7 @@ The `aria-current="page"` attribute is referenced in `primary-navigation.css`:
 }
 ```
 
-**Note**
+##### Note
 
 - CSS Nesting is used in this project.
 
