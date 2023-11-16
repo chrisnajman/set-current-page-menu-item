@@ -21,3 +21,5 @@ const locationPathname = location.pathname
 const locationString = `${locationProtocol}//${locationHostname}${locationPathname}`
 
 console.log(locationString)
+
+console.log(location.pathname.split("/").pop())
