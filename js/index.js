@@ -23,3 +23,9 @@ document.body.onload = setCurrentPageMenuItem()
 // console.log(locationString)
 
 // console.log(location.pathname.split("/").pop())
+
+const pop = location.pathname.split("/").pop()
+
+if (pop === "") {
+  console.log("pop!")
+}
