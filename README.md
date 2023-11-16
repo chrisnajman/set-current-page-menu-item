@@ -12,8 +12,8 @@ The JavaScript function checks to see if the `link.href` matches the `location.h
 
 ```JavaScript
 if (
-      link.pathname.split("/").pop() === "index.html" &&
-      location.pathname.split("/").pop() === ""
+      link.href.split("/").pop() === "index.html" &&
+      location.href.split("/").pop() === ""
     )
 ```
 
