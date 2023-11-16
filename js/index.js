@@ -8,3 +8,9 @@ console.log(location.href)
 
 console.log("Location pathname:")
 console.log(location.pathname)
+
+console.log("Location protocol")
+console.log(location.protocol)
+
+console.log("Location hostname")
+console.log(location.hostname)
