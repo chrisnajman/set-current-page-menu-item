@@ -14,3 +14,11 @@ console.log(location.protocol)
 
 console.log("Location hostname")
 console.log(location.hostname)
+
+const locationProtocol = location.protocol
+const locationHostname = location.hostname
+const locationPathname = location.pathname
+
+const locationString = `${locationProtocol}//${locationHostname}${locationPathname}`
+
+console.log(locationString)
