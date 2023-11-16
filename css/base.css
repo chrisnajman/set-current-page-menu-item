@@ -38,17 +38,16 @@ footer {
     color: var(--light);
 }
 
+header,
 footer,
 main {
-    padding: 1rem;
+    padding: 2rem 1rem;
 }
 
 header {
     display: var(--flex);
     flex-direction: column;
     gap: 3rem;
-
-    padding: 2rem 1rem;
 }
 
 footer a {
