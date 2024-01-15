@@ -1,4 +1,4 @@
-.primary-navigation-wrapper {
+.primary-navigation {
     max-width: 60rem;
     margin: var(--horz-center);
     & ul {
